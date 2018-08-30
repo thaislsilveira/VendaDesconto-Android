@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="appvendadesconto.com.br.appvendadesconto.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="11dp"
+        android:text="LOJA BAFUDEX FASHION!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="13dp"
+        android:layout_toStartOf="@+id/textView"
+        app:srcCompat="@drawable/venda" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:layout_marginTop="36dp"
+        android:text="Código da Venda" />
+
+    <EditText
+        android:id="@+id/edtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtCodigo"
+        android:layout_marginStart="78dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:text="Data da Venda" />
+
+    <EditText
+        android:id="@+id/edtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_below="@+id/textView3"
+        android:layout_marginEnd="17dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imgLogo"
+        android:layout_below="@+id/edtCodigo"
+        android:layout_marginTop="28dp"
+        android:text="Valor da Venda (R$):" />
+
+    <EditText
+        android:id="@+id/edtVenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edtVenda"
+        android:layout_below="@+id/edtVenda"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="37dp"
+        android:text="Selecione o Desconto:" />
+
+    <RadioGroup
+        android:id="@+id/rgdDesconto"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtData"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdbDesconto5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="5%" />
+
+        <RadioButton
+            android:id="@+id/rdbDesconto7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="7%" />
+
+        <RadioButton
+            android:id="@+id/rdbDesconto10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rgdDesconto"
+            android:layout_toEndOf="@+id/imgLogo"
+            android:layout_weight="1"
+            android:text="10%" />
+
+        <RadioButton
+            android:id="@+id/rdbDesconto20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="20%" />
+
+        <RadioButton
+            android:id="@+id/rdbDesconto50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="50%" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/btnLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp"
+        android:layout_toEndOf="@+id/btnCalcular"
+        app:srcCompat="@drawable/eraser" />
+
+    <ImageButton
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnLimpar"
+        android:layout_toEndOf="@+id/edtCodigo"
+        app:srcCompat="@drawable/calculation" />
+
+</android.widget.RelativeLayout>
